@@ -298,7 +298,10 @@ print("Floating point tests")
 
 printf(".")
 for i=1,1000 do
-  local n = math.random()*200-100
+  local n = 0
+  while math.floor(n) == n do
+    n = math.random()*200-100
+  end
   nb_test(n,9)
 end
 print(" OK")
